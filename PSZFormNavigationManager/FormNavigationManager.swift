@@ -10,4 +10,24 @@ import UIKit
 
 public class FormNavigationManager: NSObject {
    
+    // MARK: - Properties
+    
+    public var inputFieldControllers:[UIResponder] = []
+    
+    // MARK: - Utilities
+    
+    func addInputField(inputField:UIResponder) {
+        if !contains(inputFieldControllers, inputField) {
+            inputFieldControllers.append(inputField)
+        }
+    }
+    
+    public func addTextField(textField:UITextField) {
+        addInputField(textField)
+    }
+    
+    public func addTextView(textView:UITextView) {
+        addInputField(textView)
+    }
+    
 }

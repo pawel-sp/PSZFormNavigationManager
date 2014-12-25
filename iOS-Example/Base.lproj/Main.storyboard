@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textfield 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kF-zI-p3C">
-                                <rect key="frame" x="16" y="80" width="78" height="20.5"/>
+                                <rect key="frame" x="16" y="80" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textfield 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOf-6S-pWf">
-                                <rect key="frame" x="16" y="147" width="78" height="20.5"/>
+                                <rect key="frame" x="16" y="147" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textview 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjK-KX-i6B">
-                                <rect key="frame" x="16" y="214" width="80.5" height="20.5"/>
+                                <rect key="frame" x="16" y="214" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -118,6 +118,11 @@
                             <constraint firstAttribute="trailing" secondItem="A2R-kZ-2SR" secondAttribute="trailing" constant="16" id="zfE-DS-hzO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textfield1" destination="5LS-xV-WD3" id="HNS-sf-aiI"/>
+                        <outlet property="textfield2" destination="A2R-kZ-2SR" id="ogn-RN-Orj"/>
+                        <outlet property="textview1" destination="nYA-PP-Zhw" id="FMR-iK-kfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLm-GI-6B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,29 @@
 //
 
 import UIKit
+import PSZFormNavigationManager
 
 class DefaultExampleViewController: UIViewController {
 
-
-
+    // MARK: - Outlets
+    
+    @IBOutlet weak var textfield1: UITextField!
+    @IBOutlet weak var textfield2: UITextField!
+    @IBOutlet weak var textview1: UITextView!
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    // MARK: - Setup
+    
+    func setup() {
+        let formNavigationManager = FormNavigationManager()
+        formNavigationManager.addTextField(textfield1)
+        formNavigationManager.addTextField(textfield2)
+        formNavigationManager.addTextView(textview1)
+    }
 }
