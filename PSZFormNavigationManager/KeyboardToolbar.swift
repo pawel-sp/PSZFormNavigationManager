@@ -23,6 +23,7 @@ public class KeyboardToolbar: UIToolbar {
     class var barButtonItemSelector:Selector {
         return "didSelectBarButtonItem:"
     }
+    var barButtonItemsDelegate:KeyboardToolbarDelegate?
     
     // MARK: - Utilities
     
@@ -52,7 +53,7 @@ public class KeyboardToolbar: UIToolbar {
     
     // MARK: - Actions
     
-    class func didSelectBarButtonItem(sender:UIBarButtonItem) {
-        
+    func didSelectBarButtonItem(sender:UIBarButtonItem) {
+        barButtonItemsDelegate?.keyboardToolbar(self, didSelectBarButtonItem: sender)
     }
 }

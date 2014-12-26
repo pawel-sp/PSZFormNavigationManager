@@ -13,6 +13,8 @@
 		55B79ECD1A4DAE460064ECB9 /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79ECC1A4DAE460064ECB9 /* KeyboardToolbar.swift */; };
 		55B79EDB1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EDA1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift */; };
 		55B79EDF1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EDE1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift */; };
+		55B79EE11A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EE01A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift */; };
+		55B79EE51A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EE41A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift */; };
 		55CA37CB1A4ADC520042408C /* PSZFormNavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CA37D11A4ADC520042408C /* PSZFormNavigationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CA37C51A4ADC520042408C /* PSZFormNavigationManager.framework */; };
 		55CA37D81A4ADC520042408C /* PSZFormNavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */; };
@@ -36,6 +38,8 @@
 		55B79ECC1A4DAE460064ECB9 /* KeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
 		55B79EDA1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+PSZFormNavigationForm.swift"; sourceTree = "<group>"; };
 		55B79EDE1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyboardToolbar+Buttons.swift"; sourceTree = "<group>"; };
+		55B79EE01A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardToolbarDelegate.swift; sourceTree = "<group>"; };
+		55B79EE41A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormNavigationManager+KeyboardToolbarDelegate.swift"; sourceTree = "<group>"; };
 		55CA37C51A4ADC520042408C /* PSZFormNavigationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSZFormNavigationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CA37C91A4ADC520042408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSZFormNavigationManager.h; sourceTree = "<group>"; };
@@ -78,8 +82,27 @@
 			isa = PBXGroup;
 			children = (
 				55B79EC61A4DAB740064ECB9 /* InputFieldProtocol.swift */,
+				55B79EE01A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		55B79EE21A4DB9350064ECB9 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				55B79ECC1A4DAE460064ECB9 /* KeyboardToolbar.swift */,
+				55B79EDE1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		55B79EE31A4DB9DC0064ECB9 /* Navigation manager */ = {
+			isa = PBXGroup;
+			children = (
+				55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */,
+				55B79EE41A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift */,
+			);
+			name = "Navigation manager";
 			sourceTree = "<group>";
 		};
 		55CA37BB1A4ADC520042408C = {
@@ -104,9 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */,
-				55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */,
-				55B79ECC1A4DAE460064ECB9 /* KeyboardToolbar.swift */,
-				55B79EDE1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift */,
+				55B79EE31A4DB9DC0064ECB9 /* Navigation manager */,
+				55B79EE21A4DB9350064ECB9 /* Keyboard */,
 				55B79ECB1A4DAC480064ECB9 /* Protocols */,
 				55B79ECA1A4DAC2C0064ECB9 /* Extensions */,
 				55CA37C81A4ADC520042408C /* Supporting Files */,
@@ -246,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B79EE51A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift in Sources */,
 				55B79EDB1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift in Sources */,
 				55B79EDF1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift in Sources */,
 				55CA38191A4ADCEA0042408C /* FormNavigationManager.swift in Sources */,
@@ -253,6 +276,7 @@
 				55B79EC91A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift in Sources */,
 				55B79EC71A4DAB740064ECB9 /* InputFieldProtocol.swift in Sources */,
 				55B79EC51A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift in Sources */,
+				55B79EE11A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

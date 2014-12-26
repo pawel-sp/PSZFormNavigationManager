@@ -17,7 +17,9 @@ public class FormNavigationManager: NSObject {
     // MARK: - Utilities
     
     public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBarType keyboardToolBar:KeyboardToolbar) {
-        self.inputFields = inputFields
+        
+        self.inputFields                       = inputFields
+        keyboardToolBar.barButtonItemsDelegate = self
         
         for a in inputFields {
             var b = a
