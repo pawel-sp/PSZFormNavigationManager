@@ -20,7 +20,7 @@ public class KeyboardToolbar: UIToolbar {
    
     // MARK: - Properties
     
-    class var barButtonItemSelector:Selector {
+    var barButtonItemSelector:Selector {
         return "didSelectBarButtonItem:"
     }
     var barButtonItemsDelegate:KeyboardToolbarDelegate?
@@ -32,22 +32,22 @@ public class KeyboardToolbar: UIToolbar {
     }
     
     public class func keyboardToolbarForType(type:KeyboardToolbarType) -> KeyboardToolbar {
-        let toolbar   = defaultToolBar()
-        toolbar.items = itemsForType(type)
+        let toolbar = defaultToolBar()
+        toolbar.setItemsForType(type)
         return toolbar
     }
     
-    class func itemsForType(type:KeyboardToolbarType) -> [AnyObject]? {
+    func setItemsForType(type:KeyboardToolbarType) {
         switch type {
         case .Default:
-            return [
+            items = [
                 defaultPreviousBarButtonItem(),
                 defaultNextBarButtonItem(),
                 UIBarButtonItem.flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
             ]
         default:
-            return []
+            items = []
         }
     }
     

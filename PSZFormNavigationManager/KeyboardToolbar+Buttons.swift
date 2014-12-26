@@ -10,19 +10,19 @@ import UIKit
 
 extension KeyboardToolbar {
     
-    class func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
+    func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
         return UIBarButtonItem.barButtonItemForTitle(title, target: self, action: barButtonItemSelector, andTag: type.rawValue)
     }
     
-    public class func defaultPreviousBarButtonItem() -> UIBarButtonItem {
+    func defaultPreviousBarButtonItem() -> UIBarButtonItem {
         return barButtonItemForTitle("<", andType: .Previous)
     }
     
-    public class func defaultNextBarButtonItem() -> UIBarButtonItem {
+    func defaultNextBarButtonItem() -> UIBarButtonItem {
         return barButtonItemForTitle(">", andType: .Next)
     }
     
-    public class func defaultDoneBarButtonItem() -> UIBarButtonItem {
+    func defaultDoneBarButtonItem() -> UIBarButtonItem {
         return barButtonItemForTitle("Done", andType: .Done)
     }
 }
