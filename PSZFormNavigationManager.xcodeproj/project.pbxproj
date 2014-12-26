@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55B79EC51A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EC41A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift */; };
+		55B79EC71A4DAB740064ECB9 /* InputFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EC61A4DAB740064ECB9 /* InputFieldProtocol.swift */; };
+		55B79EC91A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B79EC81A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift */; };
 		55CA37CB1A4ADC520042408C /* PSZFormNavigationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CA37D11A4ADC520042408C /* PSZFormNavigationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CA37C51A4ADC520042408C /* PSZFormNavigationManager.framework */; };
 		55CA37D81A4ADC520042408C /* PSZFormNavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55B79EC41A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+PSZFormNavigationManager.swift"; sourceTree = "<group>"; };
+		55B79EC61A4DAB740064ECB9 /* InputFieldProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldProtocol.swift; sourceTree = "<group>"; };
+		55B79EC81A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+PSZFormNavigationManager.swift"; sourceTree = "<group>"; };
 		55CA37C51A4ADC520042408C /* PSZFormNavigationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSZFormNavigationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CA37C91A4ADC520042408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSZFormNavigationManager.h; sourceTree = "<group>"; };
@@ -52,6 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55B79ECA1A4DAC2C0064ECB9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55B79EC81A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift */,
+				55B79EC41A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		55B79ECB1A4DAC480064ECB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				55B79EC61A4DAB740064ECB9 /* InputFieldProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		55CA37BB1A4ADC520042408C = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +98,8 @@
 			children = (
 				55CA37CA1A4ADC520042408C /* PSZFormNavigationManager.h */,
 				55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */,
+				55B79ECB1A4DAC480064ECB9 /* Protocols */,
+				55B79ECA1A4DAC2C0064ECB9 /* Extensions */,
 				55CA37C81A4ADC520042408C /* Supporting Files */,
 			);
 			path = PSZFormNavigationManager;
@@ -213,6 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55CA38191A4ADCEA0042408C /* FormNavigationManager.swift in Sources */,
+				55B79EC91A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift in Sources */,
+				55B79EC71A4DAB740064ECB9 /* InputFieldProtocol.swift in Sources */,
+				55B79EC51A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

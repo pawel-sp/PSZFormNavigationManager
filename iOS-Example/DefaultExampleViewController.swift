@@ -27,9 +27,11 @@ class DefaultExampleViewController: UIViewController {
     // MARK: - Setup
     
     func setup() {
-        let formNavigationManager = FormNavigationManager()
-        formNavigationManager.addTextField(textfield1)
-        formNavigationManager.addTextField(textfield2)
-        formNavigationManager.addTextView(textview1)
+        let manager = FormNavigationManager()
+        manager.registerInputFields([
+            textfield1,
+            textfield2,
+            textview1
+            ])
     }
 }
