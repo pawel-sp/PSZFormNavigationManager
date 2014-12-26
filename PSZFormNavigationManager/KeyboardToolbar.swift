@@ -39,7 +39,12 @@ public class KeyboardToolbar: UIToolbar {
     class func itemsForType(type:KeyboardToolbarType) -> [AnyObject]? {
         switch type {
         case .Default:
-            return [defaultPreviousBarButtonItem()]
+            return [
+                defaultPreviousBarButtonItem(),
+                defaultNextBarButtonItem(),
+                UIBarButtonItem.flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
         default:
             return []
         }
@@ -47,7 +52,7 @@ public class KeyboardToolbar: UIToolbar {
     
     // MARK: - Actions
     
-    func didSelectBarButtonItem(sender:UIBarButtonItem) {
+    class func didSelectBarButtonItem(sender:UIBarButtonItem) {
         
     }
 }
