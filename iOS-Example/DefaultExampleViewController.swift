@@ -28,10 +28,6 @@ class DefaultExampleViewController: UIViewController {
     
     func setup() {
         let manager = FormNavigationManager()
-        manager.registerInputFields([
-            textfield1,
-            textfield2,
-            textview1
-            ])
+        manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBarType:KeyboardToolbar.keyboardToolbarForType(.Default))
     }
 }

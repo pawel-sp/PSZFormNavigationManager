@@ -16,8 +16,13 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Utilities
     
-    public func registerInputFields(inputFields:[InputFieldProtocol]) {
+    public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBarType keyboardToolBar:KeyboardToolbar) {
         self.inputFields = inputFields
+        
+        for a in inputFields {
+            var b = a
+            b.inputAccessoryView = keyboardToolBar
+        }
     }
     
 }
