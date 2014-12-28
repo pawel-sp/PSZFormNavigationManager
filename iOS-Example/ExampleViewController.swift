@@ -1,5 +1,5 @@
 //
-//  DefaultExampleViewController.swift
+//  ExampleViewController.swift
 //  iOS-Example
 //
 //  Created by Paweł Sporysz on 25.12.2014.
@@ -9,7 +9,7 @@
 import UIKit
 import PSZFormNavigationManager
 
-class DefaultExampleViewController: UIViewController {
+class ExampleViewController: UIViewController {
 
     // MARK: - Outlets
     
@@ -20,6 +20,8 @@ class DefaultExampleViewController: UIViewController {
     @IBOutlet weak var infiniteNavigationSwitch: UISwitch!
     
     // MARK: - Properties
+    
+    var selectedKeyboardToolBarType:KeyboardToolbarType = .Default
     
     lazy var manager:FormNavigationManager = {
         let manager = FormNavigationManager()
@@ -37,7 +39,7 @@ class DefaultExampleViewController: UIViewController {
     // MARK: - Setup
     
     func setup() {
-        manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBar:KeyboardToolbar.keyboardToolbarForType(.Default))
+        manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBar:KeyboardToolbar.keyboardToolbarForType(selectedKeyboardToolBarType))
     }
     
     // MARK: - Actions

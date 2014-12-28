@@ -7,7 +7,7 @@
         <!--Examples-->
         <scene sceneID="RHd-ie-C4K">
             <objects>
-                <tableViewController id="HmF-Jb-Ayq" sceneMemberID="viewController">
+                <tableViewController id="HmF-Jb-Ayq" customClass="TableViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="e4o-fG-9hl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,9 +32,25 @@
                                                 <constraint firstAttribute="centerY" secondItem="D0U-yd-aiX" secondAttribute="centerY" id="jfl-aJ-SZZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="pyj-2n-eiV" kind="show" id="xgC-8z-wwR"/>
-                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x9B-X0-eq2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9B-X0-eq2" id="rHr-Fu-RIE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwt-QB-gib">
+                                                    <rect key="frame" x="8" y="11" width="32" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qwt-QB-gib" firstAttribute="leading" secondItem="rHr-Fu-RIE" secondAttribute="leading" constant="8" id="BPY-tT-kcW"/>
+                                                <constraint firstAttribute="centerY" secondItem="qwt-QB-gib" secondAttribute="centerY" id="kDK-7s-FdF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -45,15 +61,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Examples" id="g1w-0J-jne"/>
+                    <connections>
+                        <segue destination="pyj-2n-eiV" kind="show" identifier="showExample" id="cch-co-GjO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnR-5r-jLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="256"/>
         </scene>
-        <!--Default Example View Controller-->
+        <!--Example View Controller-->
         <scene sceneID="1UE-lJ-wQo">
             <objects>
-                <viewController id="pyj-2n-eiV" customClass="DefaultExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pyj-2n-eiV" customClass="ExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PEy-HI-FCq"/>
                         <viewControllerLayoutGuide type="bottom" id="TtW-wE-BZV"/>
@@ -142,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLm-GI-6B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="-20"/>
+            <point key="canvasLocation" x="2299" y="256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nBv-zt-RBy">
