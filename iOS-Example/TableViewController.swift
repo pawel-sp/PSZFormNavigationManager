@@ -42,6 +42,8 @@ class TableViewController: UITableViewController {
         switch indexPath.row {
         case 0:     showExampleForKeyboardToolbarType(.Default)
         case 1:     showExampleForKeyboardToolbarType(.Text)
+        case 2:     showExampleForKeyboardToolbarType(.DefaultCentered)
+        case 3:     showExampleForKeyboardToolbarType(.TextCentered)
         default:    break
         }
     }

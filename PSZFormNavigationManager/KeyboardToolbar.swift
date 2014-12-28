@@ -9,7 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default, Text
+    case Default, Text, DefaultCentered, TextCentered
 }
 
 public enum KeyboardToolBarButtonItemType:Int {
@@ -18,6 +18,13 @@ public enum KeyboardToolBarButtonItemType:Int {
 
 public class KeyboardToolbar: UIToolbar {
    
+    // MARK: - Settings 
+    
+    struct Settings {
+        static let previousTitle = "Prev"
+        static let nextTitle     = "Next"
+    }
+    
     // MARK: - Properties
     
     var barButtonItemSelector:Selector {
@@ -48,10 +55,26 @@ public class KeyboardToolbar: UIToolbar {
             ]
         case .Text :
             items = [
-                defaultPreviousBarButtonItemForTitle("Previous"),
-                defaultNextBarButtonItemForTitle("Next"),
+                defaultPreviousBarButtonItemForTitle(Settings.previousTitle),
+                defaultNextBarButtonItemForTitle(Settings.nextTitle),
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
+            ]
+        case .DefaultCentered:
+            items = [
+                defaultPreviousBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultNextBarButtonItem()
+            ]
+        case .TextCentered:
+            items = [
+                defaultPreviousBarButtonItemForTitle(Settings.previousTitle),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultNextBarButtonItemForTitle(Settings.nextTitle)
             ]
         default:
             items = []
