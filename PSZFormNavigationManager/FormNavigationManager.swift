@@ -17,16 +17,20 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Properties
     
+    /// It's important to assign delegate after registering, otherwise it won't work
     public var delegate:FormNavigationManagerDelegate?
     
     public var inputFields:[InputFieldProtocol] = []
+    
+    public var keyboardToolBar:KeyboardToolbar?
     
     // MARK: - Utilities
     
     public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBar keyboardToolBar:KeyboardToolbar) {
         
-        self.inputFields                       = inputFields
+        self.keyboardToolBar                   = keyboardToolBar
         keyboardToolBar.barButtonItemsDelegate = self
+        self.inputFields                       = inputFields
         
         for inputField in inputFields {
             var _inputField                = inputField
