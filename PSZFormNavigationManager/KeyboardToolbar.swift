@@ -9,11 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default, Text, DefaultCentered, TextCentered
-}
-
-public enum KeyboardToolBarButtonItemType:Int {
-    case Previous,Next,Done
+    case Default, Text, DefaultCentered, TextCentered, Custom
 }
 
 public class KeyboardToolbar: UIToolbar {
@@ -21,8 +17,11 @@ public class KeyboardToolbar: UIToolbar {
     // MARK: - Settings 
     
     struct Settings {
-        static let previousTitle = "Prev"
-        static let nextTitle     = "Next"
+        static let previousTitle      = "Prev"
+        static let nextTitle          = "Next"
+        static let previousTitleShort = "<"
+        static let nextTitleShort     = ">"
+        static let doneTitle          = "Done"
     }
     
     // MARK: - Properties
@@ -34,7 +33,7 @@ public class KeyboardToolbar: UIToolbar {
     
     // MARK: - Utilities
     
-    class func defaultToolBar() -> KeyboardToolbar {
+    public class func defaultToolBar() -> KeyboardToolbar {
         return KeyboardToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 50))
     }
     

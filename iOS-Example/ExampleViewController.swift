@@ -24,7 +24,7 @@ class ExampleViewController: UIViewController {
     var selectedKeyboardToolBarType:KeyboardToolbarType = .Default
     
     lazy var manager:FormNavigationManager = {
-        let manager = FormNavigationManager()
+        let manager                = FormNavigationManager()
         manager.infiniteNavigation = self.infiniteNavigationSwitch.on
         return manager
         }()

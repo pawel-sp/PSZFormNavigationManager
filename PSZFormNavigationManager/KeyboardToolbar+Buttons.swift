@@ -8,6 +8,10 @@
 
 import UIKit
 
+public enum KeyboardToolBarButtonItemType:Int {
+    case Previous,Next,Done,FlexibleSpace
+}
+
 extension KeyboardToolbar {
     
     func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
@@ -23,18 +27,20 @@ extension KeyboardToolbar {
     }
     
     func defaultPreviousBarButtonItem() -> UIBarButtonItem {
-        return defaultPreviousBarButtonItemForTitle("<")
+        return defaultPreviousBarButtonItemForTitle(Settings.previousTitleShort)
     }
     
     func defaultNextBarButtonItem() -> UIBarButtonItem {
-        return defaultNextBarButtonItemForTitle(">")
+        return defaultNextBarButtonItemForTitle(Settings.nextTitleShort)
     }
     
     func defaultDoneBarButtonItem() -> UIBarButtonItem {
-        return barButtonItemForTitle("Done", andType: .Done)
+        return barButtonItemForTitle(Settings.doneTitle, andType: .Done)
     }
     
     func flexibleSpaceBarButtonItem() -> UIBarButtonItem {
-        return UIBarButtonItem.flexibleSpaceBarButtonItem()
+        let barButtonItem = UIBarButtonItem.flexibleSpaceBarButtonItem()
+        barButtonItem.tag = KeyboardToolBarButtonItemType.FlexibleSpace.rawValue
+        return barButtonItem
     }
 }

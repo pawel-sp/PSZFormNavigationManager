@@ -14,7 +14,8 @@ class TableViewController: UITableViewController {
     // MARK: - Settings
     
     struct Settings {
-        static let exampleSegueName = "showExample"
+        static let exampleSegueName       = "showExample"
+        static let customExampleSegueName = "customExample"
     }
     
     // MARK: - Navigation
@@ -25,7 +26,12 @@ class TableViewController: UITableViewController {
     
     func showExampleForKeyboardToolbarType(keyboardToolbarType:KeyboardToolbarType) {
         selectedKeyboardToolbarType = keyboardToolbarType
-        performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        var segueName = ""
+        switch keyboardToolbarType {
+        case .Custom: segueName = Settings.customExampleSegueName
+        default:      segueName = Settings.exampleSegueName
+        }
+        performSegueWithIdentifier(segueName, sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -44,6 +50,7 @@ class TableViewController: UITableViewController {
         case 1:     showExampleForKeyboardToolbarType(.Text)
         case 2:     showExampleForKeyboardToolbarType(.DefaultCentered)
         case 3:     showExampleForKeyboardToolbarType(.TextCentered)
+        case 4:     showExampleForKeyboardToolbarType(.Custom)
         default:    break
         }
     }
