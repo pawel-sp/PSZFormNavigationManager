@@ -7,12 +7,33 @@
 //
 
 import UIKit
+import PSZFormNavigationManager
 
-class DynamicExampleViewController: UIViewController {
+class DynamicExampleViewController: UIViewController, FormNavigationManagerDelegate {
 
     // MARK: - Outlets
     
     @IBOutlet weak var textfield1: UITextField!
     @IBOutlet weak var textfield2: UITextField!
 
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    // MARK: - Setup
+    
+    func setup() {
+        let manager = FormNavigationManager()
+        manager.registerInputFields([textfield1,textfield2], forKeyboardToolBar: KeyboardToolbar.defaultToolBar())
+        manager.delegate = self
+    }
+    
+    // MARK: - FormNavigationManagerDelegate
+    
+    func formNavigationManager(formNavigationManager: FormNavigationManager, keyboardToolbarItemsForInputField inputField: InputFieldProtocol) -> [AnyObject]? {
+        return nil
+    }
 }

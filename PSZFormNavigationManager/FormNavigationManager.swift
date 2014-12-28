@@ -17,6 +17,8 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Properties
     
+    public var delegate:FormNavigationManagerDelegate?
+    
     public var inputFields:[InputFieldProtocol] = []
     
     // MARK: - Utilities

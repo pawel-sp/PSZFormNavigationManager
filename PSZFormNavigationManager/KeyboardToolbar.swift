@@ -9,7 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default, Text, DefaultCentered, TextCentered, Custom, Dynamic
+    case Default, Text, DefaultCentered, TextCentered
 }
 
 public class KeyboardToolbar: UIToolbar {
@@ -31,19 +31,16 @@ public class KeyboardToolbar: UIToolbar {
     }
     var barButtonItemsDelegate:KeyboardToolbarDelegate?
     
-    public var type:KeyboardToolbarType?
     
     // MARK: - Utilities
     
     public class func defaultToolBar() -> KeyboardToolbar {
         let toolbar = KeyboardToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 50))
-        toolbar.type = .Custom //default type
         return toolbar
     }
     
     public class func keyboardToolbarForType(type:KeyboardToolbarType) -> KeyboardToolbar {
         let toolbar  = defaultToolBar()
-        toolbar.type = type
         toolbar.setItemsForType(type)
         return toolbar
     }

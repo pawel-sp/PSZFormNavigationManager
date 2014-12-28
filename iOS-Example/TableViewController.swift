@@ -25,17 +25,6 @@ class TableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    func showExampleForKeyboardToolbarType(keyboardToolbarType:KeyboardToolbarType) {
-        selectedKeyboardToolbarType = keyboardToolbarType
-        var segueName = ""
-        switch keyboardToolbarType {
-        case .Custom:  segueName = Settings.customExampleSegueName
-        case .Dynamic: segueName = Settings.dynamicExampleSegueName
-        default:       segueName = Settings.exampleSegueName
-        }
-        performSegueWithIdentifier(segueName, sender: nil)
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Settings.exampleSegueName {
             if let target = segue.destinationViewController as? ExampleViewController {
@@ -48,13 +37,24 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
-        case 0:     showExampleForKeyboardToolbarType(.Default)
-        case 1:     showExampleForKeyboardToolbarType(.Text)
-        case 2:     showExampleForKeyboardToolbarType(.DefaultCentered)
-        case 3:     showExampleForKeyboardToolbarType(.TextCentered)
-        case 4:     showExampleForKeyboardToolbarType(.Custom)
-        case 5:     showExampleForKeyboardToolbarType(.Dynamic)
-        default:    break
+        case 0:
+            selectedKeyboardToolbarType = .Default
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        case 1:
+            selectedKeyboardToolbarType = .Text
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        case 2:
+            selectedKeyboardToolbarType = .DefaultCentered
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        case 3:
+            selectedKeyboardToolbarType = .TextCentered
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        case 4:
+            performSegueWithIdentifier(Settings.customExampleSegueName, sender: nil)
+        case 5:
+            performSegueWithIdentifier(Settings.dynamicExampleSegueName, sender: nil)
+        default:
+            break
         }
     }
     

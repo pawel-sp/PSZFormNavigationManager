@@ -20,6 +20,7 @@
 		55CA37D81A4ADC520042408C /* PSZFormNavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */; };
 		55CA38191A4ADCEA0042408C /* FormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */; };
 		55E937B71A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937B61A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift */; };
+		55E937C81A5091BA0064922B /* FormNavigationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937C71A5091BA0064922B /* FormNavigationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSZFormNavigationManagerTests.swift; sourceTree = "<group>"; };
 		55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormNavigationManager.swift; sourceTree = "<group>"; };
 		55E937B61A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+PSZFormNavigationManager.swift"; sourceTree = "<group>"; };
+		55E937C71A5091BA0064922B /* FormNavigationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormNavigationManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				55B79EC61A4DAB740064ECB9 /* InputFieldProtocol.swift */,
 				55B79EE01A4DB8D60064ECB9 /* KeyboardToolbarDelegate.swift */,
+				55E937C71A5091BA0064922B /* FormNavigationManagerDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				55B79EE51A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift in Sources */,
 				55B79EDB1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift in Sources */,
 				55B79EDF1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift in Sources */,
+				55E937C81A5091BA0064922B /* FormNavigationManagerDelegate.swift in Sources */,
 				55CA38191A4ADCEA0042408C /* FormNavigationManager.swift in Sources */,
 				55B79ECD1A4DAE460064ECB9 /* KeyboardToolbar.swift in Sources */,
 				55B79EC91A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift in Sources */,
