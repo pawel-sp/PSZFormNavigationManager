@@ -19,6 +19,7 @@
 		55CA37D11A4ADC520042408C /* PSZFormNavigationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CA37C51A4ADC520042408C /* PSZFormNavigationManager.framework */; };
 		55CA37D81A4ADC520042408C /* PSZFormNavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */; };
 		55CA38191A4ADCEA0042408C /* FormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */; };
+		55E937B71A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937B61A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		55CA37D61A4ADC520042408C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CA37D71A4ADC520042408C /* PSZFormNavigationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSZFormNavigationManagerTests.swift; sourceTree = "<group>"; };
 		55CA38181A4ADCEA0042408C /* FormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormNavigationManager.swift; sourceTree = "<group>"; };
+		55E937B61A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+PSZFormNavigationManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				55B79EC81A4DAC0D0064ECB9 /* UITextView+PSZFormNavigationManager.swift */,
 				55B79EC41A4DAB5E0064ECB9 /* UITextField+PSZFormNavigationManager.swift */,
 				55B79EDA1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift */,
+				55E937B61A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E937B71A50656E0064922B /* UIResponder+PSZFormNavigationManager.swift in Sources */,
 				55B79EE51A4DBA320064ECB9 /* FormNavigationManager+KeyboardToolbarDelegate.swift in Sources */,
 				55B79EDB1A4DB1150064ECB9 /* UIBarButtonItem+PSZFormNavigationForm.swift in Sources */,
 				55B79EDF1A4DB6260064ECB9 /* KeyboardToolbar+Buttons.swift in Sources */,
