@@ -16,6 +16,7 @@
 		55CA381E1A4ADD3C0042408C /* PSZFormNavigationManager.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55CA38151A4ADCD20042408C /* PSZFormNavigationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55E937C11A50805A0064922B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937C01A50805A0064922B /* TableViewController.swift */; };
 		55E937C41A5089220064922B /* CustomExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937C31A5089220064922B /* CustomExampleViewController.swift */; };
+		55E937C61A5090770064922B /* DynamicExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E937C51A5090770064922B /* DynamicExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		55CA380F1A4ADCD20042408C /* PSZFormNavigationManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PSZFormNavigationManager.xcodeproj; sourceTree = "<group>"; };
 		55E937C01A50805A0064922B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		55E937C31A5089220064922B /* CustomExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomExampleViewController.swift; sourceTree = "<group>"; };
+		55E937C51A5090770064922B /* DynamicExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				55BB709E1A4C8446008CAC52 /* ExampleViewController.swift */,
 				55E937C31A5089220064922B /* CustomExampleViewController.swift */,
+				55E937C51A5090770064922B /* DynamicExampleViewController.swift */,
 			);
 			name = Examples;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				55CA37F01A4ADC9A0042408C /* AppDelegate.swift in Sources */,
 				55E937C11A50805A0064922B /* TableViewController.swift in Sources */,
+				55E937C61A5090770064922B /* DynamicExampleViewController.swift in Sources */,
 				55E937C41A5089220064922B /* CustomExampleViewController.swift in Sources */,
 				55BB709F1A4C8446008CAC52 /* ExampleViewController.swift in Sources */,
 			);
