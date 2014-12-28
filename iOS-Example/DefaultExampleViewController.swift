@@ -17,6 +17,16 @@ class DefaultExampleViewController: UIViewController {
     @IBOutlet weak var textfield2: UITextField!
     @IBOutlet weak var textview1: UITextView!
     
+    @IBOutlet weak var infiniteNavigationSwitch: UISwitch!
+    
+    // MARK: - Properties
+    
+    lazy var manager:FormNavigationManager = {
+        let manager = FormNavigationManager()
+        manager.infiniteNavigation = self.infiniteNavigationSwitch.on
+        return manager
+        }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -27,8 +37,12 @@ class DefaultExampleViewController: UIViewController {
     // MARK: - Setup
     
     func setup() {
-        let manager = FormNavigationManager()
-        manager.infiniteNavigation = false
         manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBar:KeyboardToolbar.keyboardToolbarForType(.Default))
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func infiniteNavigationValueChangedAction(sender: UISwitch) {
+        manager.infiniteNavigation = sender.on
     }
 }

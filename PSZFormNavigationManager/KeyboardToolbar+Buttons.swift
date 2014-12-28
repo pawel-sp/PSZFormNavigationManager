@@ -14,12 +14,20 @@ extension KeyboardToolbar {
         return UIBarButtonItem.barButtonItemForTitle(title, target: self, action: barButtonItemSelector, andTag: type.rawValue)
     }
     
+    func defaultPreviousBarButtonItemForTitle(title:String) -> UIBarButtonItem {
+        return barButtonItemForTitle(title, andType: .Previous)
+    }
+    
+    func defaultNextBarButtonItemForTitle(title:String) -> UIBarButtonItem {
+        return barButtonItemForTitle(title, andType: .Next)
+    }
+    
     func defaultPreviousBarButtonItem() -> UIBarButtonItem {
-        return barButtonItemForTitle("<", andType: .Previous)
+        return defaultPreviousBarButtonItemForTitle("<")
     }
     
     func defaultNextBarButtonItem() -> UIBarButtonItem {
-        return barButtonItemForTitle(">", andType: .Next)
+        return defaultNextBarButtonItemForTitle(">")
     }
     
     func defaultDoneBarButtonItem() -> UIBarButtonItem {

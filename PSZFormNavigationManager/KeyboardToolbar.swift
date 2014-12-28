@@ -9,7 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default
+    case Default, Text
 }
 
 public enum KeyboardToolBarButtonItemType:Int {
@@ -43,6 +43,13 @@ public class KeyboardToolbar: UIToolbar {
             items = [
                 defaultPreviousBarButtonItem(),
                 defaultNextBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
+        case .Text :
+            items = [
+                defaultPreviousBarButtonItemForTitle("Previous"),
+                defaultNextBarButtonItemForTitle("Next"),
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
             ]
