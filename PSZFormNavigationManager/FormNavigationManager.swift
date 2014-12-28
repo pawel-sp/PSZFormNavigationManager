@@ -17,8 +17,16 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Properties
     
-    /// It's important to assign delegate after registering, otherwise it won't work
-    public var delegate:FormNavigationManagerDelegate?
+    /// It's important to assign delegate after registering, otherwise it won't work.
+    public var delegate:FormNavigationManagerDelegate? {
+        didSet {
+            for inputField in inputFields {
+                var _inputField                = inputField
+                let items                      = delegate?.formNavigationManager(self, keyboardToolbarItemsForInputField: _inputField)
+                _inputField.inputAccessoryView = KeyboardToolbar.defaultToolBarWithItems(items)
+            }
+        }
+    }
     
     public var inputFields:[InputFieldProtocol] = []
     

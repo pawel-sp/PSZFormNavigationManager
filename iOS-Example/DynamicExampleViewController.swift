@@ -26,9 +26,21 @@ class DynamicExampleViewController: UIViewController, FormNavigationManagerDeleg
     // MARK: - Setup
     
     func setup() {
+        view.backgroundColor = UIColor.whiteColor()
+        
         let manager = FormNavigationManager()
         manager.registerInputFields([textfield1,textfield2], forKeyboardToolBar: KeyboardToolbar.defaultToolBar())
         manager.delegate = self
+    }
+    
+    func colorBarButtonItem() -> UIBarButtonItem {
+        return UIBarButtonItem(title: "Color", style: UIBarButtonItemStyle.Bordered, target: self, action: "changeBackgroundColor")
+    }
+    
+    // MARK: - Action 
+    
+    func changeBackgroundColor() {
+        view.backgroundColor = view.backgroundColor == UIColor.whiteColor() ? UIColor.lightGrayColor() : UIColor.whiteColor()
     }
     
     // MARK: - FormNavigationManagerDelegate
@@ -39,11 +51,15 @@ class DynamicExampleViewController: UIViewController, FormNavigationManagerDeleg
                 return [
                     keyboardToolbar.defaultNextBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
+                    colorBarButtonItem(),
+                    keyboardToolbar.flexibleSpaceBarButtonItem(),
                     keyboardToolbar.defaultDoneBarButtonItem()
                 ]
             } else if inputField.isEqual(textfield2) {
                 return [
                     keyboardToolbar.defaultPreviousBarButtonItem(),
+                    keyboardToolbar.flexibleSpaceBarButtonItem(),
+                    colorBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
                     keyboardToolbar.defaultDoneBarButtonItem()
                 ]

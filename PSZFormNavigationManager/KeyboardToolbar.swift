@@ -39,6 +39,12 @@ public class KeyboardToolbar: UIToolbar {
         return toolbar
     }
     
+    class func defaultToolBarWithItems(items:[AnyObject]?) -> KeyboardToolbar {
+        let toolbar  = defaultToolBar()
+        toolbar.items = items
+        return toolbar
+    }
+    
     public class func keyboardToolbarForType(type:KeyboardToolbarType) -> KeyboardToolbar {
         let toolbar  = defaultToolBar()
         toolbar.setItemsForType(type)
