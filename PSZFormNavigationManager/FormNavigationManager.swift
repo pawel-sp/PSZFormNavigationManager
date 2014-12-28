@@ -10,6 +10,11 @@ import UIKit
 
 public class FormNavigationManager: NSObject {
    
+    // MARK: - Settings
+    
+    /// Infinite navigation means that after typing next button when last input field is active, the first input field become active. It works the same in different direction. Default value = true.
+    public var infiniteNavigation:Bool = true
+    
     // MARK: - Properties
     
     public var inputFields:[InputFieldProtocol] = []
@@ -32,8 +37,8 @@ public class FormNavigationManager: NSObject {
         for (index,element) in enumerate(inputFields) {
             if element.isEqual(inputField) {
                 switch index {
-                case 0:         return (inputFields.last,inputFields[index+1])
-                case count - 1: return (inputFields[index-1],inputFields.first)
+                case 0:         return (infiniteNavigation ? inputFields.last : nil,inputFields[index+1])
+                case count - 1: return (inputFields[index-1],infiniteNavigation ? inputFields.first : nil)
                 default:        return (inputFields[index-1],inputFields[index+1])
                 }
             }

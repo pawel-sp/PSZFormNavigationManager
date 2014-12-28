@@ -28,6 +28,7 @@ class DefaultExampleViewController: UIViewController {
     
     func setup() {
         let manager = FormNavigationManager()
+        manager.infiniteNavigation = false
         manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBar:KeyboardToolbar.keyboardToolbarForType(.Default))
     }
 }
