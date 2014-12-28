@@ -240,7 +240,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-74-53u">
-                                <rect key="frame" x="16" y="109" width="568" height="30"/>
+                                <rect key="frame" x="16" y="108" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textfield 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKi-Ya-tq6">
+                                <rect key="frame" x="16" y="147" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofm-2s-gFK">
+                                <rect key="frame" x="16" y="176" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -249,13 +260,19 @@
                         <constraints>
                             <constraint firstItem="UIx-GS-4fi" firstAttribute="leading" secondItem="iUK-kZ-2XQ" secondAttribute="leading" constant="16" id="07u-6b-4on"/>
                             <constraint firstItem="QcW-74-53u" firstAttribute="top" secondItem="UIx-GS-4fi" secondAttribute="bottom" constant="8" id="5um-dw-Tdq"/>
+                            <constraint firstItem="ofm-2s-gFK" firstAttribute="top" secondItem="jKi-Ya-tq6" secondAttribute="bottom" constant="8" id="Kys-Qd-bo8"/>
                             <constraint firstAttribute="trailing" secondItem="QcW-74-53u" secondAttribute="trailing" constant="16" id="LiT-3u-E7R"/>
                             <constraint firstItem="UIx-GS-4fi" firstAttribute="top" secondItem="htw-Xa-0yH" secondAttribute="bottom" constant="16" id="TbL-Ny-sE2"/>
+                            <constraint firstAttribute="trailing" secondItem="ofm-2s-gFK" secondAttribute="trailing" constant="16" id="Zlr-Ig-cHE"/>
+                            <constraint firstItem="jKi-Ya-tq6" firstAttribute="top" secondItem="QcW-74-53u" secondAttribute="bottom" constant="9" id="bpy-Bc-x8H"/>
+                            <constraint firstItem="ofm-2s-gFK" firstAttribute="leading" secondItem="iUK-kZ-2XQ" secondAttribute="leading" constant="16" id="c2c-kf-mZY"/>
                             <constraint firstItem="QcW-74-53u" firstAttribute="leading" secondItem="iUK-kZ-2XQ" secondAttribute="leading" constant="16" id="cDf-kV-hvW"/>
+                            <constraint firstItem="jKi-Ya-tq6" firstAttribute="leading" secondItem="iUK-kZ-2XQ" secondAttribute="leading" constant="16" id="n41-1j-8yU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textfield1" destination="QcW-74-53u" id="qgO-xF-NN9"/>
+                        <outlet property="textfield2" destination="ofm-2s-gFK" id="zms-Xo-hnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQt-cY-E1n" userLabel="First Responder" sceneMemberID="firstResponder"/>

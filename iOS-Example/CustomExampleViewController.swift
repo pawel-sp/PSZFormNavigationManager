@@ -14,7 +14,8 @@ class CustomExampleViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var textfield1: UITextField!
-
+    @IBOutlet weak var textfield2: UITextField!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -27,8 +28,13 @@ class CustomExampleViewController: UIViewController {
     func setup() {
         let manager           = FormNavigationManager()
         let keyboardToolbar   = KeyboardToolbar.defaultToolBar()
-
+        keyboardToolbar.items = [
+            keyboardToolbar.defaultDoneBarButtonItemForTitle("OK"),
+            keyboardToolbar.flexibleSpaceBarButtonItem(),
+            keyboardToolbar.defaultPreviousBarButtonItemForTitle("<<"),
+            keyboardToolbar.defaultNextBarButtonItemForTitle(">>")
+        ]
         
-        manager.registerInputFields([textfield1], forKeyboardToolBar: keyboardToolbar)
+        manager.registerInputFields([textfield1,textfield2], forKeyboardToolBar: keyboardToolbar)
     }
 }

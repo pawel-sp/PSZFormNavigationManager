@@ -14,31 +14,35 @@ public enum KeyboardToolBarButtonItemType:Int {
 
 extension KeyboardToolbar {
     
-    func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
+    public func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
         return UIBarButtonItem.barButtonItemForTitle(title, target: self, action: barButtonItemSelector, andTag: type.rawValue)
     }
     
-    func defaultPreviousBarButtonItemForTitle(title:String) -> UIBarButtonItem {
+    public func defaultPreviousBarButtonItemForTitle(title:String) -> UIBarButtonItem {
         return barButtonItemForTitle(title, andType: .Previous)
     }
     
-    func defaultNextBarButtonItemForTitle(title:String) -> UIBarButtonItem {
+    public func defaultNextBarButtonItemForTitle(title:String) -> UIBarButtonItem {
         return barButtonItemForTitle(title, andType: .Next)
     }
     
-    func defaultPreviousBarButtonItem() -> UIBarButtonItem {
+    public func defaultDoneBarButtonItemForTitle(title:String) -> UIBarButtonItem {
+        return barButtonItemForTitle(title, andType: .Done)
+    }
+    
+    public func defaultPreviousBarButtonItem() -> UIBarButtonItem {
         return defaultPreviousBarButtonItemForTitle(Settings.previousTitleShort)
     }
     
-    func defaultNextBarButtonItem() -> UIBarButtonItem {
+    public func defaultNextBarButtonItem() -> UIBarButtonItem {
         return defaultNextBarButtonItemForTitle(Settings.nextTitleShort)
     }
     
-    func defaultDoneBarButtonItem() -> UIBarButtonItem {
-        return barButtonItemForTitle(Settings.doneTitle, andType: .Done)
+    public func defaultDoneBarButtonItem() -> UIBarButtonItem {
+        return defaultDoneBarButtonItemForTitle(Settings.doneTitle)
     }
     
-    func flexibleSpaceBarButtonItem() -> UIBarButtonItem {
+    public func flexibleSpaceBarButtonItem() -> UIBarButtonItem {
         let barButtonItem = UIBarButtonItem.flexibleSpaceBarButtonItem()
         barButtonItem.tag = KeyboardToolBarButtonItemType.FlexibleSpace.rawValue
         return barButtonItem

@@ -37,8 +37,8 @@ public class FormNavigationManager: NSObject {
         for (index,element) in enumerate(inputFields) {
             if element.isEqual(inputField) {
                 switch index {
-                case 0:         return (infiniteNavigation ? inputFields.last : nil,inputFields[index+1])
-                case count - 1: return (inputFields[index-1],infiniteNavigation ? inputFields.first : nil)
+                case 0:         return (infiniteNavigation ? inputFields.last : nil, index + 1 < count ? inputFields[index+1] : inputFields.first)
+                case count - 1: return (index - 1 >= 0 ? inputFields[index-1] : inputFields.last ,infiniteNavigation ? inputFields.first : nil)
                 default:        return (inputFields[index-1],inputFields[index+1])
                 }
             }
