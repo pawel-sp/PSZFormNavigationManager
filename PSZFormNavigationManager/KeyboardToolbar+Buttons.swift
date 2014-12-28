@@ -25,4 +25,8 @@ extension KeyboardToolbar {
     func defaultDoneBarButtonItem() -> UIBarButtonItem {
         return barButtonItemForTitle("Done", andType: .Done)
     }
+    
+    func flexibleSpaceBarButtonItem() -> UIBarButtonItem {
+        return UIBarButtonItem.flexibleSpaceBarButtonItem()
+    }
 }

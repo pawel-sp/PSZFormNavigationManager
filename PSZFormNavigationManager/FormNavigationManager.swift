@@ -21,9 +21,9 @@ public class FormNavigationManager: NSObject {
         self.inputFields                       = inputFields
         keyboardToolBar.barButtonItemsDelegate = self
         
-        for a in inputFields {
-            var b = a
-            b.inputAccessoryView = keyboardToolBar
+        for inputField in inputFields {
+            var _inputField = inputField
+            _inputField.inputAccessoryView = keyboardToolBar
         }
     }
     

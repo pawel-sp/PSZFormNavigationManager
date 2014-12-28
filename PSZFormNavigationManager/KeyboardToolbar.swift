@@ -43,7 +43,7 @@ public class KeyboardToolbar: UIToolbar {
             items = [
                 defaultPreviousBarButtonItem(),
                 defaultNextBarButtonItem(),
-                UIBarButtonItem.flexibleSpaceBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
             ]
         default:
