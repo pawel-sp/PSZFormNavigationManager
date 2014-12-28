@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol InputFieldProtocol {
+public protocol InputFieldProtocol:NSObjectProtocol {
     
     //this protocol is used only to set common protocol with inputAccessoryView for UITextField and UITextView
     

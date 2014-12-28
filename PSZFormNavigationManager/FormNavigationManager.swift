@@ -27,4 +27,9 @@ public class FormNavigationManager: NSObject {
         }
     }
     
+    func activeInputField() -> InputFieldProtocol? {
+        let currentFirstResponder = UIResponder.currentFirstResponder()
+        return inputFields.filter{ $0.isEqual(currentFirstResponder) }.first
+    }
+    
 }
