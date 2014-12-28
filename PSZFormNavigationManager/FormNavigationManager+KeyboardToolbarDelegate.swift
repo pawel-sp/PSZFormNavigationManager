@@ -11,16 +11,14 @@ import UIKit
 extension FormNavigationManager:KeyboardToolbarDelegate {
     
     func keyboardToolbar(keyboardToolbar: KeyboardToolbar, didSelectBarButtonItem barButtonItem: UIBarButtonItem) {
-
-        println("\(activeInputField())")
         
         switch barButtonItem.tag {
         case KeyboardToolBarButtonItemType.Previous.rawValue:
-            break
+            moveToPreviousInputField()
         case KeyboardToolBarButtonItemType.Next.rawValue:
-            break
+            moveToNextInputField()
         case KeyboardToolBarButtonItemType.Done.rawValue:
-            break
+            finishNavigation()
         default:
             break
         }

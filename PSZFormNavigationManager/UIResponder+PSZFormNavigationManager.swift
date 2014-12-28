@@ -14,10 +14,10 @@ extension UIResponder {
         static var firstCurrentResponder:UIResponder?
     }
     
-    class func currentFirstResponder() -> UIResponder {
+    class func currentFirstResponder() -> UIResponder? {
         Static.firstCurrentResponder = nil
         UIApplication.sharedApplication().sendAction("findFirstResponder:", to: nil, from: nil, forEvent: nil)
-        return Static.firstCurrentResponder!
+        return Static.firstCurrentResponder
     }
     
     func findFirstResponder(sender:AnyObject) {
