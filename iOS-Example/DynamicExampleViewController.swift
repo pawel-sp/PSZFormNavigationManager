@@ -44,25 +44,25 @@ class DynamicExampleViewController: UIViewController, FormNavigationManagerDeleg
     }
     
     // MARK: - FormNavigationManagerDelegate
-    
-    func formNavigationManager(formNavigationManager: FormNavigationManager, keyboardToolbarItemsForInputField inputField: InputFieldProtocol) -> [AnyObject]? {
+ 
+    func formNavigationManager(formNavigationManager: FormNavigationManager, keyboardToolbarForInputField inputField: InputFieldProtocol) -> KeyboardToolbar? {
         if let keyboardToolbar = formNavigationManager.keyboardToolBar {
             if inputField.isEqual(textfield1) {
-                return [
+                return KeyboardToolbar.defaultToolBarWithItems([
                     keyboardToolbar.defaultNextBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
                     colorBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
                     keyboardToolbar.defaultDoneBarButtonItem()
-                ]
+                ])
             } else if inputField.isEqual(textfield2) {
-                return [
+                return KeyboardToolbar.defaultToolBarWithItems([
                     keyboardToolbar.defaultPreviousBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
                     colorBarButtonItem(),
                     keyboardToolbar.flexibleSpaceBarButtonItem(),
                     keyboardToolbar.defaultDoneBarButtonItem()
-                ]
+                ])
             }
         }
         return nil

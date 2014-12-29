@@ -36,8 +36,7 @@ public class FormNavigationManager: NSObject {
         if delegate != nil {
             for inputField in inputFields {
                 var _inputField                = inputField
-                let items                      = delegate?.formNavigationManager(self, keyboardToolbarItemsForInputField: _inputField)
-                _inputField.inputAccessoryView = KeyboardToolbar.defaultToolBarWithItems(items)
+                _inputField.inputAccessoryView = delegate?.formNavigationManager(self, keyboardToolbarForInputField: _inputField)
             }
         }
     }

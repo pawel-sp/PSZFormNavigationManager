@@ -14,8 +14,8 @@ public protocol FormNavigationManagerDelegate {
     That function can be used to return different keyboard toolbar for every input field. You must assign delegate first.
     
     :param: formNavigationManager Current instance of form navigation manager.
-    :param: inputField  Instance of input field to return items for keyboard toolbar.
+    :param: inputField  Instance of input field to return keyboard toolbar.
     */
-    func formNavigationManager(formNavigationManager:FormNavigationManager, keyboardToolbarItemsForInputField inputField:InputFieldProtocol) -> [AnyObject]?
+    func formNavigationManager(formNavigationManager:FormNavigationManager, keyboardToolbarForInputField inputField:InputFieldProtocol) -> KeyboardToolbar?
     
 }

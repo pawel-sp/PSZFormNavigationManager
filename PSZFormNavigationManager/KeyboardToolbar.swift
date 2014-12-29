@@ -40,8 +40,8 @@ public class KeyboardToolbar: UIToolbar {
         return toolbar
     }
     
-    class func defaultToolBarWithItems(items:[AnyObject]?) -> KeyboardToolbar {
-        let toolbar  = defaultToolBar()
+    public class func defaultToolBarWithItems(items:[AnyObject]?) -> KeyboardToolbar {
+        let toolbar   = defaultToolBar()
         toolbar.items = items
         return toolbar
     }
