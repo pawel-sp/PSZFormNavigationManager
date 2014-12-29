@@ -20,11 +20,7 @@ public class FormNavigationManager: NSObject {
     /// It's important to assign delegate after registering, otherwise it won't work.
     public var delegate:FormNavigationManagerDelegate? {
         didSet {
-            for inputField in inputFields {
-                var _inputField                = inputField
-                let items                      = delegate?.formNavigationManager(self, keyboardToolbarItemsForInputField: _inputField)
-                _inputField.inputAccessoryView = KeyboardToolbar.defaultToolBarWithItems(items)
-            }
+            assignKeyboardToolbarFromDelegate()
         }
     }
     
@@ -34,15 +30,33 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Utilities
     
+    func assignKeyboardToolbarFromDelegate() {
+        if delegate != nil {
+            for inputField in inputFields {
+                var _inputField                = inputField
+                let items                      = delegate?.formNavigationManager(self, keyboardToolbarItemsForInputField: _inputField)
+                _inputField.inputAccessoryView = KeyboardToolbar.defaultToolBarWithItems(items)
+            }
+        }
+    }
+    
+    func assignKeyboardToolbar(keyboardToolbar:KeyboardToolbar) {
+        for inputField in inputFields {
+            var _inputField                = inputField
+            _inputField.inputAccessoryView = keyboardToolBar
+        }
+    }
+    
     public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBar keyboardToolBar:KeyboardToolbar) {
         
         self.keyboardToolBar                   = keyboardToolBar
         keyboardToolBar.barButtonItemsDelegate = self
         self.inputFields                       = inputFields
         
-        for inputField in inputFields {
-            var _inputField                = inputField
-            _inputField.inputAccessoryView = keyboardToolBar
+        if delegate != nil {
+            assignKeyboardToolbarFromDelegate()
+        } else {
+            assignKeyboardToolbar(keyboardToolBar)
         }
     }
     
