@@ -35,8 +35,10 @@ public class FormNavigationManager: NSObject {
     func assignKeyboardToolbarFromDelegate() {
         if delegate != nil {
             for inputField in inputFields {
-                var _inputField                = inputField
-                _inputField.inputAccessoryView = delegate?.formNavigationManager(self, keyboardToolbarForInputField: _inputField)
+                var _inputField                         = inputField
+                let keyboardToolbar                     = delegate?.formNavigationManager(self, keyboardToolbarForInputField: _inputField)
+                keyboardToolbar?.barButtonItemsDelegate = self
+                _inputField.inputAccessoryView          = keyboardToolbar
             }
         }
     }
