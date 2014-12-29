@@ -34,6 +34,7 @@ public class KeyboardToolbar: UIToolbar {
     
     // MARK: - Utilities
     
+    ///Default toolbar for displaying above keyboard. It doesn't have any buttons.
     public class func defaultToolBar() -> KeyboardToolbar {
         let toolbar = KeyboardToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 50))
         return toolbar
@@ -45,6 +46,11 @@ public class KeyboardToolbar: UIToolbar {
         return toolbar
     }
     
+    /**
+    Default toolbar with buttons specified for type. Different type has different buttons. Buttons have already assigned navigation functions.
+    
+    :param: type Type of keyboard toolbar to assign.
+    */
     public class func keyboardToolbarForType(type:KeyboardToolbarType) -> KeyboardToolbar {
         let toolbar  = defaultToolBar()
         toolbar.setItemsForType(type)

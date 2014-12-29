@@ -17,15 +17,17 @@ public class FormNavigationManager: NSObject {
     
     // MARK: - Properties
     
-    /// It's important to assign delegate after registering, otherwise it won't work.
+    /// Delegate. You can use it to display different keyboard toolbar according to active input field.
     public var delegate:FormNavigationManagerDelegate? {
         didSet {
             assignKeyboardToolbarFromDelegate()
         }
     }
     
+    /// Assigned input fields, for example UITextField, UITextView.
     public var inputFields:[InputFieldProtocol] = []
     
+    /// Assigned keyboard toolbar.
     public var keyboardToolBar:KeyboardToolbar?
     
     // MARK: - Utilities
@@ -47,6 +49,12 @@ public class FormNavigationManager: NSObject {
         }
     }
     
+    /**
+    Use this function to register input fields. It causes for every input field there will be specified keyboard toolbar displayed.
+    
+    :param: inputFields     Input fields to register. It can be UITextField, UITextView or any other object which implement InputProtocol.
+    :param: keyboardToolBar Keyboard toolbar to register.
+    */
     public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBar keyboardToolBar:KeyboardToolbar) {
         
         self.keyboardToolBar                   = keyboardToolBar
