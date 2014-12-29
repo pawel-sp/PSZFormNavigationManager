@@ -9,7 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default, Text, DefaultCentered, TextCentered
+    case Default, Text, DefaultCentered, TextCentered, OnlyNext, OnlyNextText, OnlyPrev, OnlyPrevText
 }
 
 public class KeyboardToolbar: UIToolbar {
@@ -88,6 +88,30 @@ public class KeyboardToolbar: UIToolbar {
                 defaultDoneBarButtonItem(),
                 flexibleSpaceBarButtonItem(),
                 defaultNextBarButtonItemForTitle(Settings.nextTitle)
+            ]
+        case .OnlyNext:
+            items = [
+                defaultNextBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
+        case .OnlyNextText:
+            items = [
+                defaultNextBarButtonItemForTitle(Settings.nextTitle),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
+        case .OnlyPrev:
+            items = [
+                defaultPreviousBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
+        case .OnlyPrevText:
+            items = [
+                defaultPreviousBarButtonItemForTitle(Settings.previousTitle),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
             ]
         default:
             items = []
