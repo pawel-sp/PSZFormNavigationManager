@@ -34,7 +34,7 @@ class DynamicExampleViewController: UIViewController, FormNavigationManagerDeleg
     }
     
     func colorBarButtonItem() -> UIBarButtonItem {
-        return UIBarButtonItem(title: "Color", style: UIBarButtonItemStyle.Bordered, target: self, action: "changeBackgroundColor")
+        return UIBarButtonItem(title: "Color", style: UIBarButtonItemStyle.Plain, target: self, action: "changeBackgroundColor")
     }
     
     // MARK: - Action 

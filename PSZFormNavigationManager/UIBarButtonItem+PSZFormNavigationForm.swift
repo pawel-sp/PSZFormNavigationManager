@@ -18,14 +18,14 @@ extension UIBarButtonItem {
     /**
     Returns bar button item with specified parameters.
     
-    :param: title  Title to display inside bar button item.
-    :param: target Target
-    :param: action Action
-    :param: tag    Tag
+    - parameter title:  Title to display inside bar button item.
+    - parameter target: Target
+    - parameter action: Action
+    - parameter tag:    Tag
     
     */
     public class func barButtonItemForTitle(title:String?, target:AnyObject?, action:Selector, andTag tag:Int) -> UIBarButtonItem {
-        let barButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Bordered, target: target, action: action)
+        let barButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: target, action: action)
         barButtonItem.tag = tag
         return barButtonItem
     }

@@ -31,7 +31,6 @@ public class KeyboardToolbar: UIToolbar {
     }
     var barButtonItemsDelegate:KeyboardToolbarDelegate?
     
-    
     // MARK: - Utilities
     
     ///Default toolbar for displaying above keyboard. It doesn't have any buttons.
@@ -40,7 +39,7 @@ public class KeyboardToolbar: UIToolbar {
         return toolbar
     }
     
-    public class func defaultToolBarWithItems(items:[AnyObject]?) -> KeyboardToolbar {
+    public class func defaultToolBarWithItems(items:[UIBarButtonItem]?) -> KeyboardToolbar {
         let toolbar   = defaultToolBar()
         toolbar.items = items
         return toolbar
@@ -49,7 +48,7 @@ public class KeyboardToolbar: UIToolbar {
     /**
     Default toolbar with buttons specified for type. Different type has different buttons. Buttons have already assigned navigation functions.
     
-    :param: type Type of keyboard toolbar to assign.
+    - parameter type: Type of keyboard toolbar to assign.
     */
     public class func keyboardToolbarForType(type:KeyboardToolbarType) -> KeyboardToolbar {
         let toolbar  = defaultToolBar()
@@ -113,8 +112,6 @@ public class KeyboardToolbar: UIToolbar {
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
             ]
-        default:
-            items = []
         }
     }
     

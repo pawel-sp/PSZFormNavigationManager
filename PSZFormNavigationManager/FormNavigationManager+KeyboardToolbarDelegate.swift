@@ -13,8 +13,8 @@ extension FormNavigationManager:KeyboardToolbarDelegate {
     /**
     Invokes every time when bar button item from keyboard toolbar is pressed.
     
-    :param: keyboardToolbar Current toolbar displayed over the keyboard.
-    :param: barButtonItem   Pressed bar button item.
+    - parameter keyboardToolbar: Current toolbar displayed over the keyboard.
+    - parameter barButtonItem:   Pressed bar button item.
     */
     func keyboardToolbar(keyboardToolbar: KeyboardToolbar, didSelectBarButtonItem barButtonItem: UIBarButtonItem) {
         switch barButtonItem.tag {

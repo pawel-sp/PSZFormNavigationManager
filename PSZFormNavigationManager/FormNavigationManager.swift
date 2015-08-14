@@ -35,7 +35,7 @@ public class FormNavigationManager: NSObject {
     func assignKeyboardToolbarFromDelegate() {
         if delegate != nil {
             for inputField in inputFields {
-                var _inputField                         = inputField
+                let _inputField                         = inputField
                 let keyboardToolbar                     = delegate?.formNavigationManager(self, keyboardToolbarForInputField: _inputField)
                 keyboardToolbar?.barButtonItemsDelegate = self
                 _inputField.inputAccessoryView          = keyboardToolbar
@@ -45,7 +45,7 @@ public class FormNavigationManager: NSObject {
     
     func assignKeyboardToolbar(keyboardToolbar:KeyboardToolbar) {
         for inputField in inputFields {
-            var _inputField                = inputField
+            let _inputField                = inputField
             _inputField.inputAccessoryView = keyboardToolBar
         }
     }
@@ -53,8 +53,8 @@ public class FormNavigationManager: NSObject {
     /**
     Use this function to register input fields. It causes for every input field there will be specified keyboard toolbar displayed.
     
-    :param: inputFields     Input fields to register. It can be UITextField, UITextView or any other object which implement InputProtocol.
-    :param: keyboardToolBar Keyboard toolbar to register.
+    - parameter inputFields:     Input fields to register. It can be UITextField, UITextView or any other object which implement InputProtocol.
+    - parameter keyboardToolBar: Keyboard toolbar to register.
     */
     public func registerInputFields(inputFields:[InputFieldProtocol], forKeyboardToolBar keyboardToolBar:KeyboardToolbar) {
         
@@ -69,9 +69,9 @@ public class FormNavigationManager: NSObject {
         }
     }
     
-    func neighboringInputFieldsFrom(#inputField:InputFieldProtocol?) -> (InputFieldProtocol?,InputFieldProtocol?) {
+    func neighboringInputFieldsFrom(inputField inputField:InputFieldProtocol?) -> (InputFieldProtocol?,InputFieldProtocol?) {
         let count = inputFields.count
-        for (index,element) in enumerate(inputFields) {
+        for (index,element) in inputFields.enumerate() {
             if element.isEqual(inputField) {
                 switch index {
                 case 0:         return (infiniteNavigation ? inputFields.last : nil, index + 1 < count ? inputFields[index+1] : inputFields.first)

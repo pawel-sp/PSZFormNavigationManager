@@ -17,8 +17,8 @@ extension KeyboardToolbar {
     /**
     Return bar button item with specified parameters.
     
-    :param: title Title to display inside bar button item
-    :param: type  Type is a number saved inside tag property. According to tag correct function invokes.
+    - parameter title: Title to display inside bar button item
+    - parameter type:  Type is a number saved inside tag property. According to tag correct function invokes.
     */
     public func barButtonItemForTitle(title:String?, andType type:KeyboardToolBarButtonItemType) -> UIBarButtonItem {
         return UIBarButtonItem.barButtonItemForTitle(title, target: self, action: barButtonItemSelector, andTag: type.rawValue)
@@ -27,7 +27,7 @@ extension KeyboardToolbar {
     /**
     Returns default previous bar button item with specified parameters.
     
-    :param: title Title to display inside previous bar button item.
+    - parameter title: Title to display inside previous bar button item.
     */
     public func defaultPreviousBarButtonItemForTitle(title:String) -> UIBarButtonItem {
         return barButtonItemForTitle(title, andType: .Previous)
@@ -36,7 +36,7 @@ extension KeyboardToolbar {
     /**
     Returns default next bar button item with specified parameters.
     
-    :param: title Title to display inside next bar button item.
+    - parameter title: Title to display inside next bar button item.
     */
     public func defaultNextBarButtonItemForTitle(title:String) -> UIBarButtonItem {
         return barButtonItemForTitle(title, andType: .Next)
@@ -45,7 +45,7 @@ extension KeyboardToolbar {
     /**
     Returns default done bar button item with specified parameters.
     
-    :param: title Title to display inside done bar button item.
+    - parameter title: Title to display inside done bar button item.
     */
     public func defaultDoneBarButtonItemForTitle(title:String) -> UIBarButtonItem {
         return barButtonItemForTitle(title, andType: .Done)
