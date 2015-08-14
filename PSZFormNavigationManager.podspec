@@ -6,5 +6,5 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Paweł Sporysz" => "pawel.s@untitledkingdom.co" }
   s.source       = { :git => "https://github.com/pawel-sp/PSZFormNavigationManager" }
-  s.source_files = "PSZFormNavigationManager/*.{h,m}"
+  s.source_files = "PSZFormNavigationManager/*.swift"
 end
