@@ -44,14 +44,20 @@ class TableViewController: UITableViewController {
             selectedKeyboardToolbarType = .Text
             performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
         case 2:
-            selectedKeyboardToolbarType = .DefaultCentered
+            selectedKeyboardToolbarType = .TextLong
             performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
         case 3:
-            selectedKeyboardToolbarType = .TextCentered
+            selectedKeyboardToolbarType = .DefaultCentered
             performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
         case 4:
-            performSegueWithIdentifier(Settings.customExampleSegueName, sender: nil)
+            selectedKeyboardToolbarType = .TextCentered
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
         case 5:
+            selectedKeyboardToolbarType = .TextLongCentered
+            performSegueWithIdentifier(Settings.exampleSegueName, sender: nil)
+        case 6:
+            performSegueWithIdentifier(Settings.customExampleSegueName, sender: nil)
+        case 7:
             performSegueWithIdentifier(Settings.dynamicExampleSegueName, sender: nil)
         default:
             break

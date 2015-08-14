@@ -9,7 +9,7 @@
 import UIKit
 
 public enum KeyboardToolbarType {
-    case Default, Text, DefaultCentered, TextCentered, OnlyNext, OnlyNextText, OnlyPrev, OnlyPrevText
+    case Default, Text, TextLong, DefaultCentered, TextCentered, TextLongCentered, OnlyNext, OnlyNextText, OnlyPrev, OnlyPrevText
 }
 
 public class KeyboardToolbar: UIToolbar {
@@ -20,6 +20,7 @@ public class KeyboardToolbar: UIToolbar {
         static let previousTitle      = "Prev"
         static let nextTitle          = "Next"
         static let previousTitleShort = "<"
+        static let previousTitleLong  = "Previous"
         static let nextTitleShort     = ">"
         static let doneTitle          = "Done"
     }
@@ -65,9 +66,16 @@ public class KeyboardToolbar: UIToolbar {
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
             ]
-        case .Text :
+        case .Text:
             items = [
                 defaultPreviousBarButtonItemForTitle(Settings.previousTitle),
+                defaultNextBarButtonItemForTitle(Settings.nextTitle),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem()
+            ]
+        case .TextLong:
+            items = [
+                defaultPreviousBarButtonItemForTitle(Settings.previousTitleLong),
                 defaultNextBarButtonItemForTitle(Settings.nextTitle),
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem()
@@ -83,6 +91,14 @@ public class KeyboardToolbar: UIToolbar {
         case .TextCentered:
             items = [
                 defaultPreviousBarButtonItemForTitle(Settings.previousTitle),
+                flexibleSpaceBarButtonItem(),
+                defaultDoneBarButtonItem(),
+                flexibleSpaceBarButtonItem(),
+                defaultNextBarButtonItemForTitle(Settings.nextTitle)
+            ]
+        case .TextLongCentered:
+            items = [
+                defaultPreviousBarButtonItemForTitle(Settings.previousTitleLong),
                 flexibleSpaceBarButtonItem(),
                 defaultDoneBarButtonItem(),
                 flexibleSpaceBarButtonItem(),
