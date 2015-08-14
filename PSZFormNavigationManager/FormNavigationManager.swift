@@ -12,8 +12,8 @@ public class FormNavigationManager: NSObject {
    
     // MARK: - Settings
     
-    /// Infinite navigation means that after typing next button when last input field is active, the first input field become active. It works the same in different direction. Default value = true.
-    public var infiniteNavigation:Bool = true
+    /// Infinite navigation means that after typing next button when last input field is active, the first input field become active. It works the same in different direction. Default value = false.
+    public var infiniteNavigation:Bool = false
     
     // MARK: - Properties
     

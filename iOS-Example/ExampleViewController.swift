@@ -42,14 +42,14 @@ class ExampleViewController: UIViewController {
         let keyboardToolbar = KeyboardToolbar.keyboardToolbarForType(selectedKeyboardToolBarType)
         manager.registerInputFields([textfield1,textfield2,textview1], forKeyboardToolBar:keyboardToolbar)
         
-//        //Uncomment for keyboard toolbar buttons attributes
-//        if let buttons = keyboardToolbar.items as? [UIBarButtonItem] {
-//            for button in buttons {
-//                button.setTitleTextAttributes(
-//                    [NSForegroundColorAttributeName:UIColor.redColor()],
-//                    forState: UIControlState.Normal)
-//            }
-//        }
+        //Uncomment for keyboard toolbar buttons attributes
+        if let buttons = keyboardToolbar.items {
+            for button in buttons {
+                button.setTitleTextAttributes(
+                    [NSForegroundColorAttributeName:UIColor.redColor()],
+                    forState: UIControlState.Normal)
+            }
+        }
     }
     
     // MARK: - Actions
