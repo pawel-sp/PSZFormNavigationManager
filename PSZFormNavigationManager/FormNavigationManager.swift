@@ -92,15 +92,21 @@ public class FormNavigationManager: NSObject {
     
     func moveToNextInputField() {
         if let activeInputField = activeInputField() {
-            activeInputField.resignFirstResponder()
-            neighboringInputFieldsFrom(inputField: activeInputField).1?.becomeFirstResponder()
+            if let input = neighboringInputFieldsFrom(inputField: activeInputField).1 {
+                input.becomeFirstResponder()
+            } else {
+                activeInputField.resignFirstResponder()
+            }
         }
     }
     
     func moveToPreviousInputField() {
         if let activeInputField = activeInputField() {
-            activeInputField.resignFirstResponder()
-            neighboringInputFieldsFrom(inputField: activeInputField).0?.becomeFirstResponder()
+            if let input = neighboringInputFieldsFrom(inputField: activeInputField).0 {
+                input.becomeFirstResponder()
+            } else {
+                activeInputField.resignFirstResponder()
+            }
         }
     }
     
